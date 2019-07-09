@@ -1,0 +1,89 @@
+APUNTES PLSQL
+
+    BLOQUES
+        SET SERVEROUTPUT ON --> Habilitar salida
+
+        BLOQUE ANONIMO
+            DECLARE
+                Variables y cursores
+            BEGIN
+                Funciones, es lo unico obligatorio
+            EXCEPTION
+                Posibles exception
+            END;
+            /
+
+        FUNCIONES
+            CREATE OR REPLACE FUNCTION nombre(datos de entrada) RETURN IS | AS 
+                Variables y cursores
+            BEGIN
+                Funciones, es lo unico obligatorio
+            EXCEPTION
+                Posibles exception
+            END;
+            /
+
+        PROCEDURE
+            CREATE OR REPLACE PROCEDURE nombre(datos de entrada) IS | AS
+                Variables y cursores
+            BEGIN
+                Funciones, es lo unico obligatorio
+            EXCEPTION
+                Posibles exception
+            END;
+            /
+
+        EXECUTE --> Para ejecutar nuestras funciones/procedure
+
+    VARIABLES
+        Identificador [CONSTANT] datatype [NOT NULL] [:=valor | DEFAULT EXPRESION]
+        nombrevariable%TYPE --> El tipo de la variable sera el mismo que nombrevariable
+
+    CURSORES
+        CURSOR nombreCursor IS consulta --> Iniciar cursor
+        OPEN nombreCursor --> Abrir cursor
+        CLOSE nombreCursor --> Cerrar cursor --> Obligatorio para no cargar la memoria
+        FETCH nombreCursor INTO variables --> Para guardar los datos del cursor en otras variables
+
+    ATRIBUTOS CURSORES
+        %FOUND --> TRUE si FETCH trae datos
+        %NOTFOUND --> TRUE si FETCH no trae datos
+        %ISOPEN --> Saber si algun cursor esta abierto
+        %ROWCOUNT --> Todas las filas que ha devuelto el FETCH
+        FOR UPDATE OF nombrevariable --> Informar que el cursor nos va a servir para actualizar el campo nombrevariable
+
+    TRIGGERS
+        DE TABLA
+        DE VISTA
+        DE SISTEMA
+
+        A NIVEL DE TRANSACCION
+            DE INSTRUCCION --> Se ejecuta una vez por cadea evento que lance el trigger --> FOR EACH STATEMENT
+            DE FILA --> Se ejecuta una vez por cada fila afectada --> FOR EACH ROW
+            
+                Suceso              :OLD                                 :NEW
+                INSERT              NULL                                Nuevo valor
+                UPDATE             Valor Almacenado           Nuevo valor
+                DELETE              Valor Almacenado           NULL
+
+    CONFIGURACION DE TRIGGERS
+        CREATE OR REPLACE TRIGGER nombre {BEFORE, AFTER, INSTEAD OF} {UPDATE, DELETE, INSERT} OF columna
+        BEGIN
+        END;
+
+    PAQUETES
+        Se crean para organizacion, seguridad y control, la estructura de los paquetes son cabecera y cuerpo
+        CREATE OR REPLACE PACKAGE nombrePaquete AS
+        Declaracion variable
+        Declaracion cursor
+        Declaracion excepcion
+        Declaracion procedimiento
+        Declaracion funcion
+        END nombrePaquete
+
+
+
+
+
+    
+    
