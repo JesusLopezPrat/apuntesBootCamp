@@ -53,8 +53,54 @@ APUNTES SQL
             REPLACE(cad, ant, nue)
             SUBSTR(cad, m, n)
             LENGTH(cad)
+            TRIM(cad)
 
         FECHA
+            SYSDATE
+            ADD_MONTHS(d,n)
+            LAST_DAY(d)
+            MONTHS_BETWEEN(d1, d2)
+            NEXT_DAY(d, cad)
+
+        CONVERSION DE TIPOS
+            TO_NUMBER(cad, fmto)
+            TO_CHAR(d, fmto)
+            TO_DATE(cad, fmto)
+
+        OTRAS
+            DECODE(var, val1, cod1,..., defecto)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
