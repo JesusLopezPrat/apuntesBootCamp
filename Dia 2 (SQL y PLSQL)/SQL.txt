@@ -1,0 +1,64 @@
+APUNTES SQL
+
+    INSTRUCCIONES
+        DDL --> Definicion de datos --> alter, create, drop, grant, revoke, audit, noaudit, rename, comment
+        DML --> Manipulacion de datos --> insert, select, delete, update, truncate, merge
+        TCL --> Control de transaccion --> commit, rollback, savepoint
+        SCL --> Control de sesion --> alter session, alter system
+
+    CONSULTAS AVANZADAS
+        = --> Valores simples
+        in --> Lista de Valores
+    
+    OPERADORES DE CONJUNTOS
+        union --> Unir resultado de dos consultas
+            union all --> Aparecen todos los campos incluidos los duplicados
+        intersect --> Devuelve las filas que son iguales en ambas consultas
+        minus --> Devuelve las filas que estan en la primera SELECT y no estan en la segunda
+
+    AGRUPACION DE ELEMENTOS
+        group by --> Agrupar un conjunto de filas a partir de la columna especificada
+        having --> Es como el where pero trabaja sobre grupos de filas
+
+    JOIN
+        join --> Combina las filas de dos tablas, en funcion de alguna columna en columna 
+        inner join --> Solo combina las filas de las dos tablas que tienen en columna
+        outer join --> Combina las dos tablas y las filas que no tengan relacion las completa con NULL
+        natural join --> Union de dos tablas que tienen en comun una columna
+        
+    INDICES
+        Estructura de memoria que permiten el acceso directo a las filas de una tabla
+
+    FUNCIONES SQL
+        ARITMETICAS
+            ABS(n)
+            CEIL(n)
+            FLOOR(n)
+            MOD(m,n)
+            POWER(m,n)
+            ROUND(m,n)
+            SQRT(n)
+            TRUNC(m,n)
+            SIGN(n)
+        
+        CARACTERES
+            CHR(n)
+            ASCII(cad)
+            CONCAT(cad1, cad2)
+            LOWER(cad)
+            UPPER(cad)
+            INITCAP(cad)
+            LPAD(cad1, n, cad2)
+            RPAD(cad1, n, cad2)
+            REPLACE(cad, ant, nue)
+            SUBSTR(cad, m, n)
+            LENGTH(cad)
+
+        FECHA
+
+
+
+
+
+
+
