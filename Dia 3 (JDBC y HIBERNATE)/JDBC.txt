@@ -1,0 +1,28 @@
+APUNTES DE JDBC
+
+    DEFINICION
+        API para operar contra una base de datos desde Java con independencia del sistema operativo y la base de datos que se esté utilizando
+
+    MANEJO DE BD
+        DriverManager
+        Connection
+        Statement
+        PreparedStatement
+        ResultSet
+
+    ESQUEMA BASICO
+        Comprobar Driver --> Class.forName(nombreDriver)
+        Abrir conexion --> Connection connection = DriverManager.getConnection(url, usuario, contraseña)
+        Crear Statement/PreparedStatement --> Statement statement = connection.createStatement()
+        Ejecutar query --> ResultSet rs = statement.executeQuery(sql)
+        Tratar resultados
+            while(rs.next){
+                tipo dato = get'Tipo'(nombreTabla)
+            }
+            rs.close();
+        Cerrar conexion --> connection.close();
+
+    TIPOS DE STATEMENT
+        Statements
+        CallableStatement
+        PreparedStatement

@@ -1,0 +1,44 @@
+APUNTES DE HIBERNATE
+
+    ANOTACIONES
+        @Entity
+            Clases
+        @Table
+            Clases
+            Nos permite mapear la clase java con la base de datos
+        @Id
+            Atributos
+            Para relacionarla con la clave primaria
+        @GenerateValue(strategy=GenerationType.TIPO)
+            Atributos
+            Para autoincrementar la id
+        @Column
+            Atributos
+            Relacionar atributo con la columna de la base de datos
+        @NotEmpty
+            Evitar nulos y vacios
+        @Temporal
+            Cambios en las fechas
+        @DateTimeFormat
+            Formato fechas
+        @Digits
+            Validar enteros
+        @Min y @Max
+            Mayor y menor, tambien con mensajes
+        @Length
+            Longitud cadenas
+        @MappedSuperClass
+            Identificar clase padre
+        @OneToMany(cascade=CascadeType.TIPO, mappedBy=nombreVariable)
+            Clase de la lista de objetos --> 1
+        @ManyToOne
+        @JoinColumn(name=nombreVariable)
+            Clase del objeto --> n
+        @ManyToMany(fetch = FetchType.TIPO)
+        @JoinColumn(name=nombreTablaIntermedia, joinColumns = @JoinColumn(name=campoTablaPrincipal), inverseJoinColumns = @JoinColumn(name=campoTablaSecundaria))
+        @ManyToMany(fetch = FetchType.TIPO, mappedBy=nombreCampoTablaPrincipal)
+
+
+
+
+    
