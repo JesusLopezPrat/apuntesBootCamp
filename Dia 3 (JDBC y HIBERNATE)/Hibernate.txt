@@ -29,7 +29,7 @@ APUNTES DE HIBERNATE
             Longitud cadenas
         @MappedSuperClass
             Identificar clase padre
-        @OneToMany(cascade=CascadeType.TIPO, mappedBy=nombreVariable)
+        @OneToMany(cascade=CascadeType.TIPO, mappedBy = nombreVariableClase)
             Clase de la lista de objetos --> 1
         @ManyToOne
         @JoinColumn(name=nombreVariable)

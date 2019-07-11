@@ -1,0 +1,89 @@
+APUNTES DE SPRING
+
+    Es ligero, extendido, mantenible y ampiable
+
+    BEANS
+        EJEMPLO EN FICHERO XML DE CONFIGURACION
+        <beans>
+            <bean id=nombreEjemplo class=importClase>
+                <property name=nombreAtributo ref=nombreEjemplo2/>
+            </bean>
+            <bean id=nombreEjemplo2 class=importClase/>
+        </beans>
+
+        EJEMPLO EN JAVA
+            @Configuracion
+            public class AppContext(){
+                @Bean
+                    public Course course(){
+                        Course course = new Course();
+                        course.setModule(module());
+                        return course;
+                    }
+
+                @Bean
+                    public Module module(){
+                        Module module = new Module();
+                        course.setAssignment(assignment());
+                        return module;;
+                    }
+
+                @Bean
+                    public Assignment assignment(){
+                        return new Assignment();
+                    }
+
+            }
+
+        ANOTACIONES
+        @Configuration
+            Spring detecta que va a ser una clase donde se encuentre la configuracion de beans
+        @Bean
+            Para metodos donde vayamos a configuracion de nuestras beans
+        @Autowired
+            Se puede poner a nivel de atributo, a nivel de constructor y a nivel de set, enlaza el dato con un bean del mismo tipo, lo mas usado es a nivel de constructor ya que a la
+            hora de compilar te canta que necesitas un objeto, si lo pones a nivel de atributo y de set no te diria nada
+
+
+            CLASES SPRING
+                ApplicationContext ctx = new AnnotationConfigApplicationContext(nombreClase.class);
+                    Para coger todos los beans que esten modificados en la clase que le indiquemos entre parentesis
+                    ctx.getBean(nombreBean);
+                        Para recoger la bean que queramos
+
+            CAPAS
+                @Controller
+                    Capa de presentacion
+                                    |
+                                    |
+                @Service
+                    Capa de negocio
+                                    |
+                                    |
+                @Repository
+                    Capa de acceso a datos
+                                    |
+                                    |
+                                BBDD
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
