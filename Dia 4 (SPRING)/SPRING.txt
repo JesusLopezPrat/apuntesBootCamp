@@ -12,7 +12,7 @@ APUNTES DE SPRING
         </beans>
 
         EJEMPLO EN JAVA
-            @Configuracion
+            @Configuration
             public class AppContext(){
                 @Bean
                     public Course course(){
@@ -43,6 +43,8 @@ APUNTES DE SPRING
         @Autowired
             Se puede poner a nivel de atributo, a nivel de constructor y a nivel de set, enlaza el dato con un bean del mismo tipo, lo mas usado es a nivel de constructor ya que a la
             hora de compilar te canta que necesitas un objeto, si lo pones a nivel de atributo y de set no te diria nada
+        @Qualifier()
+            Para saver que bean vamos a utilizar
 
 
             CLASES SPRING
@@ -50,13 +52,15 @@ APUNTES DE SPRING
                     Para coger todos los beans que esten modificados en la clase que le indiquemos entre parentesis
                     ctx.getBean(nombreBean);
                         Para recoger la bean que queramos
+                ClassPathXMLApplicationContext ctx = new ClassPathXMLApplicationContext(xml);
+                    Para archivos XML
 
             CAPAS
                 @Controller
                     Capa de presentacion
                                     |
                                     |
-                @Service
+                @Service --> Se le puede poner id @Service(id)
                     Capa de negocio
                                     |
                                     |
