@@ -1,0 +1,18 @@
+APUNTES DE SPRINGMVC
+
+    ANOTACIONES
+        @RequestMapping
+            Obtener ruta del controlador
+            @RequestMapping(nombreController, method= RequestMehod.Peticion)
+        @ResponseBody
+            Para ver si lo que hay en el controlador es util para nuestro navegador
+        @RequestParam(nombreParam)
+            Parametros en una bean
+        @PathVariable(nombreParam)
+            Parametro en la URL
+        @CookieValue(nombreParam)
+            Parametro en las cookies
+
+    FUNCIONES
+        redirect:
+            Para cambiar entre controladores
