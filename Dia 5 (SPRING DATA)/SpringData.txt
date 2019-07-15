@@ -1,0 +1,16 @@
+APUNTES SPRING DATA
+
+    RELACIONAR BD
+        public class EjemploRepository extends JpaRepository<Objeto, TipoId>{}
+            Con esta herencia a esa clase se nos conecta con la base de datos, y se van a poder realizar diferentes funciones tales com
+                delete()        count()                             deleteAll()
+                findAll()       findOne(Sort sort)            etc..
+        
+    ANOTACIONES
+        @Query
+            Para poner la query de nuestra funcion, en caso de que sea SQL tendremos que poner nativeQuery=true
+        @Param
+            En caso de que en @Query tengamos para parametros
+            Ejemplo
+                @Query(select u from User where u.firstname = :firstname)
+                User findByFirstName(@Param("firstname") String firstname)
