@@ -1,0 +1,8 @@
+APUNTES DE SPRING REST
+
+    METODOS
+        GET --> Obtener una representacion de recursos -->  SELECT
+        POST --> Crear un nuevo recurso                          -->  INSERT
+        PUT --> Actualiza los datos del recurso                 --> UPDATE
+        DELETE --> Eliminar un recurso                              --> DELETE
+        PATCH --> Actualizacion parcial de un recurso      --> UPDATE
