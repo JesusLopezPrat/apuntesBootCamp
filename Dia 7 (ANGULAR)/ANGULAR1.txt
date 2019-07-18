@@ -1,0 +1,20 @@
+APUNTES ANGULAR 1
+
+    CARACTERISTICAS
+        SPA
+        Multiplataforma
+        Patron MVW
+        Typescript
+        Plantillas HTML Template
+        Angular CLI
+        Testing
+        Animaciones
+        Accesibilidad
+
+    INSTALACION
+        npm install -g @angular/cli
+            Instalar angular/cli
+        ng new nombreCarpeta --routing
+            Creador de proyectos
+        ng g component Search
+            Crear componente
