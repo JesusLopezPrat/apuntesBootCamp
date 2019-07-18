@@ -1,0 +1,36 @@
+APUNTES DE JUNIT
+
+    TEST UNITARIOS
+        Son una forma de comprobar el correcto funcionamiento de nuestro codigo. Podemos probar:
+            Unidad de codigo
+            Nombre metodos y los parametros
+            Estado inicial = Estado final
+            
+        CARACTERISTICAS
+            Automatizable
+            Completas
+            Repetibles
+            Independientes
+
+        LIMITACIONES
+            Fuera del alcance de los test tenemos:
+                Errores de integracion
+                Errores de rendimiento
+                Otros errores que afectan a todo el sistema en el conjunto
+    
+    JUNIT
+        CARACTERISTICAS
+            Sistema de verificacion de resultados
+            Anotaciones para definir metodos de prueba, y adicionales pre y post prueba
+            Controlar excepciones y tiempos de espera
+            Parametrizacion de datos
+            Diferentes Runners para guiar la ejecucion de las pruebas
+        
+    MOCKITO
+        Stubbing
+        Ejecutar
+        Verificar
+        Concepto de Definir comportamiento (Stubbing-Ejecutar-Verificar)
+        Casos de pruebas
+        Dependencia externa
+        
